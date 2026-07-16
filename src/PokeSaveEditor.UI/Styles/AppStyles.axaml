@@ -1,0 +1,19 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Accent button style -->
+    <Style Selector="Button.accent">
+        <Setter Property="Background" Value="#E63946" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="CornerRadius" Value="6" />
+    </Style>
+    <Style Selector="Button.accent:pointerover">
+        <Setter Property="Background" Value="#C1121F" />
+    </Style>
+
+    <!-- Card hover effect -->
+    <Style Selector="Border.card:pointerover">
+        <Setter Property="Background" Value="{DynamicResource SystemControlBackgroundChromeMediumBrush}" />
+    </Style>
+</Styles>

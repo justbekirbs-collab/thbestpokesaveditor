@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:PokeSaveEditor.UI.ViewModels"
+             x:Class="PokeSaveEditor.UI.Views.PokemonListView"
+             x:DataType="vm:PokemonListViewModel">
+
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top"
+                   FontSize="14" FontWeight="SemiBold"
+                   Margin="0,0,0,8">
+            <Run Text="Party Pokémon"/>
+            <Run Text="(" /><Run Text="{Binding Count}"/><Run Text=")" />
+        </TextBlock>
+
+        <DataGrid ItemsSource="{Binding Pokemon}"
+                  SelectedItem="{Binding SelectedPokemon}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserReorderColumns="True"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="True"
+                  GridLinesVisibility="Horizontal"
+                  BorderThickness="1"
+                  BorderBrush="{DynamicResource SystemControlForegroundBaseMediumLowBrush}"
+                  CornerRadius="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Species" Binding="{Binding Species}" Width="120" />
+                <DataGridTextColumn Header="Nickname" Binding="{Binding Nickname}" Width="100" />
+                <DataGridTextColumn Header="Lv." Binding="{Binding Level}" Width="50" />
+                <DataGridTextColumn Header="Nature" Binding="{Binding Nature}" Width="80" />
+                <DataGridCheckBoxColumn Header="✨" Binding="{Binding IsShiny}" Width="40" />
+                <DataGridTextColumn Header="Ability" Binding="{Binding Ability}" Width="90" />
+                <DataGridTextColumn Header="IVs" Binding="{Binding IVs}" Width="200" />
+                <DataGridTextColumn Header="EVs" Binding="{Binding EVs}" Width="200" />
+                <DataGridTextColumn Header="Held Item" Binding="{Binding HeldItem}" Width="80" />
+                <DataGridTextColumn Header="EXP" Binding="{Binding Experience}" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

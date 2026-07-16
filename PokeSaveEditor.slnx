@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PokeSaveEditor.Core/PokeSaveEditor.Core.csproj" />
+    <Project Path="src/PokeSaveEditor.Infrastructure/PokeSaveEditor.Infrastructure.csproj" />
+    <Project Path="src/PokeSaveEditor.UI/PokeSaveEditor.UI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PokeSaveEditor.Tests/PokeSaveEditor.Tests.csproj" />
+  </Folder>
+</Solution>
